@@ -1,0 +1,14 @@
+@import 'variables'
+
+@mixin bg-pattern
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)
+
+@mixin flex-pattern
+  display: flex
+  justify-content: center
+  align-content: center
+
+@mixin text-gradient
+  @include bg-pattern
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
