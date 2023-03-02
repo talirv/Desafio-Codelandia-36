@@ -1,0 +1,144 @@
+$breakpoints: (
+    sm: 320px,
+    sm2: 375px,
+    sm3: 393px,
+    sm4: 360px,
+    md: 450px,
+    mdd: 1088px,
+    lg: 1206px
+);
+
+@mixin media-up($breakpoint){
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.box{
+    @include media-up(lg){
+        width: 1000px;
+    }
+}
+
+
+.header_container{
+    @include media-up(lg){
+        width: 1000px;
+    }
+}
+
+
+.box{
+    @include media-up(mdd){
+        width: 900px;
+        
+    }
+}
+
+
+
+.box{
+    @include media-up(mdd){
+        width: auto;
+        height: auto;
+        justify-content: center;
+        margin: 2rem;
+        text-align: center;
+        
+    }
+    .container-box{
+        @include media-up(mdd){
+            width: auto;
+            flex-direction: column ;
+        }
+        .box_left{
+            .box_students{
+                @include media-up(mdd){
+                    margin: 0 auto;
+                    
+                }
+                p {
+                    @include media-up(md){
+                        font-size: .9rem;
+                    }
+                }
+            }
+            .description-text{
+                @include media-up(mdd){
+                    margin-bottom: 2rem;
+                }
+                @include media-up(md){
+                    font-size: 1.1rem;
+                }
+            }
+            h1 {
+                @include media-up(md){
+                    font-size: 1.9rem;
+                    line-height: 1.15;
+                }
+                @include media-up(sm3){
+                    font-size: 1.5rem;
+                    line-height: 1.15;
+                }
+            }
+        }
+        .box_left{
+            @include media-up(md){
+                text-align: center;
+                align-items: center;
+            }
+            
+        }
+    }
+    .box_right {
+        @include media-up(md){
+            width: 360px;
+        }
+        
+        @include media-up(sm3){
+            width: 320px;
+            .box_btn_pay{
+                width: 100%;
+                button {
+                    @include media-up(sm3){
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+.header_container{
+    @include media-up(mdd){
+        justify-content: space-around;
+        width: auto;
+        padding: .6rem 0;
+    }
+    .header_logo{
+        @include media-up(mdd){
+            padding: 1.2rem;
+        }
+    }
+}
+
+
+.header_container{
+    @include media-up(sm3){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+.box_students{
+    @include media-up(sm){
+       width: 300px;
+        justify-content: center;
+    }
+}
