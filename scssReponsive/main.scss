@@ -3,6 +3,7 @@ $breakpoints: (
     sm2: 375px,
     sm3: 393px,
     sm4: 360px,
+    md1: 428px,
     md: 450px,
     mdd: 1088px,
     lg: 1206px
@@ -37,14 +38,14 @@ $breakpoints: (
 
 
 
+
 .box{
     @include media-up(mdd){
         width: auto;
         height: auto;
         justify-content: center;
-        margin: 2rem;
+        margin: 2rem;        
         text-align: center;
-        
     }
     .container-box{
         @include media-up(mdd){
@@ -136,9 +137,34 @@ $breakpoints: (
     
 }
 
+
+.box_right_price-middle{
+    p {
+        @include media-up(md){
+            font-size: 1.2rem;
+         }
+    }
+    
+    .price{
+        @include media-up(sm){
+            font-size: 4rem !important;
+         }
+         @include media-up(md){
+            font-size: 4rem !important;
+         }
+    }
+}
+
+.btn_ebookpay{
+    @include media-up(md1){
+        font-size: 1rem !important;
+        width: 100% !important;
+     }
+}
+
 .box_students{
     @include media-up(sm){
        width: 300px;
-        justify-content: center;
+    justify-content: center;
     }
 }
